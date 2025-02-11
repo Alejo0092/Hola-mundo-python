@@ -1,0 +1,39 @@
+coding = 'utf-8'
+
+#Este programa calcula la cantidad de mililitros diarios de una persona en porciones de (100ml y 400ml)
+
+ #variables
+mili_totales = int
+cantidad_maxima_ml = 2000
+porcion_ml_1 = 100
+porcion_ml_2 = 400
+  
+  #Se le pregunta al ususario cuantas ml a consumido en el dia
+cantidad_ml_diarios = int(input("Ingrese la cantidad de mililitros diarios: "))
+
+  #ciclo para agregar las porciones consumidas o terminar el programa 
+while mili_totales < cantidad_maxima_ml:
+    print("La cantidad de mililitros diarios es: ", mili_totales")
+    print("nporción de 100ml")
+    print("porción de 400ml")
+    print("3. Terminar")
+
+    
+    opciones = input("Ingrese la opción que corresponda con su consumo diario (1-3): ")
+    if opciones == "1":
+      mili_totales += porcion_ml_1
+    if opciones == "2":
+      mili_totales += porcion_ml_2
+    elif opciones == "3":
+     print("Gracias por utilizar el programa")
+      break 
+
+
+  # Resultados finales
+      print("RESULTADOS")
+      print(f"Mililitros totales consumidos: {mili_totales} ml")
+      print(f"Porciones de 100ml: {mili_totales // porcion_ml_1}")
+      print(f"Porciones de 400ml: {mili_totales // porcion_ml_2}")
+
+  if mili_totales >= cantidad_maxima_ml:
+      print("\n¡Has alcanzado el máximo diario recomendado!")
